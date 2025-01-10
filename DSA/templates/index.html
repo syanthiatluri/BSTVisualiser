@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Binary Tree Visualizer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Binary Search Tree Visualizer</h2>
+        </div>
+        
+        <h3>Insert Values (comma separated)</h3>
+        <input type="text" id="values" placeholder="Enter values, separated by commas...">
+        <button onclick="insert()">INSERT</button>
+        
+        <h3>Delete Nodes</h3>
+        <input type="text" id="delete-values" placeholder="Enter values to delete, separated by commas...">
+        <button onclick="deleteNodes()">DELETE</button>
+
+        <h3>Current BST</h3>
+        <div id="bst-output"></div>
+
+        <!-- Clear All Button -->
+        <button onclick="clearAll()">CLEAR ALL</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

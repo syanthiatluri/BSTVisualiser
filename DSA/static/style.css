@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color:#f5ecd5;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 0.7rem;
+    background-color: #578e7e;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #477e6e;
+}
+
+#bst-output {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.head {
+    background-color: #578e7e;
+    color: black;
+    border: 1.5px solid black;
+}
+
+.tree {
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+.node {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #123524;
+    border-radius: 50%;
+    border: 2px solid #22583e;
+}
+
+.children {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 50px;
+}
+
+.child {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.child.left::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 50%;
+    height: 20px;
+    border-top: 2px solid #123524;
+    border-right: 2px solid #22583e;
+}
+
+.child.right::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 50%;
+    width: 50%;
+    height: 20px;
+    border-top: 2px solid #123524;
+    border-right: 2px solid #22583e;
+}
